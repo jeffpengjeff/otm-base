@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	commodities: 3
+	common: n1
+	model: all meso
+-->
+
+<scenario>
+
+	<commodities>
+		<commodity id="1" name="c1" subnetworks="1,4" pathfull="true"/>
+		<commodity id="2" name="c2" subnetworks="1,2" pathfull="false"/>
+		<commodity id="3" name="c3" subnetworks="1,2,3" pathfull="false"/>
+	</commodities>
+
+	<subnetworks>
+		<subnetwork id="1">1,2,3,4,5</subnetwork>
+		<subnetwork id="2">6,3,7</subnetwork>
+		<subnetwork id="3">1,2,3,4,5,6,7</subnetwork>
+		<subnetwork id="4">1,2,3,7</subnetwork>
+	</subnetworks>
+
+	<network>
+	    <nodes>
+		   <node id="1" x="0" y="0" />
+		   <node id="2" x="1000" y="0" />
+		   <node id="3" x="2000" y="0" />
+		   <node id="4" x="3000" y="0" />
+		   <node id="5" x="4000" y="0" />
+		   <node id="6" x="5000" y="0" />
+		   <node id="7" x="1500" y="-500" />
+		   <node id="8" x="3500" y="-500" />
+	    </nodes>
+		<links>
+			<link id="1" length="1000" start_node_id="1" end_node_id="2" roadparam="1" full_lanes="5"/>
+			<link id="2" length="1000" start_node_id="2" end_node_id="3" roadparam="1" full_lanes="5"/>
+			<link id="3" length="1000" start_node_id="3" end_node_id="4" roadparam="1" full_lanes="5"/>
+			<link id="4" length="1000" start_node_id="4" end_node_id="5" roadparam="1" full_lanes="4"/>
+			<link id="5" length="1000" start_node_id="5" end_node_id="6" roadparam="1" full_lanes="4"/>
+			<link id="6" length="1000" start_node_id="7" end_node_id="3" roadparam="1" full_lanes="1"/>
+			<link id="7" length="1000" start_node_id="4" end_node_id="8" roadparam="1" full_lanes="1"/>
+		</links>
+
+		<roadconnections>
+			<roadconnection id="1" in_link="1" in_link_lanes="1#5" out_link="2" out_link_lanes="1#5" />
+			<roadconnection id="2" in_link="2" in_link_lanes="1#5" out_link="3" out_link_lanes="1#5" />
+			<roadconnection id="3" in_link="3" in_link_lanes="1#5" out_link="4" out_link_lanes="1#4" />
+			<roadconnection id="4" in_link="4" in_link_lanes="1#4" out_link="5" out_link_lanes="1#4" />
+			<roadconnection id="5" in_link="6" in_link_lanes="1" out_link="3" out_link_lanes="5" />
+			<roadconnection id="6" in_link="3" in_link_lanes="5" out_link="7" out_link_lanes="1" />
+		</roadconnections>
+
+		<roadparams>
+			<roadparam id="1" capacity="1800" speed="100" jam_density="100"/>
+		</roadparams>
+	</network>
+
+	<demands>
+		<demand subnetwork="4" commodity_id="1" start_time="0" dt="900">1000</demand>
+		<demand link_id="6" commodity_id="2" start_time="0" dt="900">500</demand>
+		<demand link_id="1" commodity_id="3" start_time="0" dt="900">1000</demand>
+	</demands>
+
+	<splits>
+		<split_node node_id="4" commodity_id="2" link_in="3" start_time="0" dt="3600">
+			<split link_out="7">0.5,0.0</split>
+			<split link_out="4">0.5,1.0</split>
+		</split_node>
+		<split_node node_id="4" commodity_id="3" link_in="3" start_time="0" dt="3600">
+			<split link_out="7">0.5,0.0</split>
+			<split link_out="4">0.5,1.0</split>
+		</split_node>
+	</splits>
+
+</scenario>
