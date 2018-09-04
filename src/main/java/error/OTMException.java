@@ -1,10 +1,15 @@
+/**
+ * Copyright (c) 2018, Gabriel Gomes (gomes@me.berkeley.edu)
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 package error;
 
 import java.io.Serializable;
 
-/**
- * Created by gomes on 4/25/2016.
- */
 public class OTMException extends Exception implements Serializable {
 
     public OTMException(String string){
