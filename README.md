@@ -1,5 +1,5 @@
 # otm-base
-Open Traffic Models
+Open Traffic Models - Base repo
 
 This repo contains the low level building blocks for OTM.
 + XSD schema (otm.xsd)
