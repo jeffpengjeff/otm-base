@@ -1,11 +1,9 @@
 /**
- * Copyright (c) 2018, Gabriel Gomes (gomes@me.berkeley.edu)
+ * Copyright (c) 2018, Gabriel Gomes
  * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree.
+ * This source code is licensed under the standard 3-clause BSD license found
+ * in the LICENSE file in the root directory of this source tree.
  */
-
 package utils;
 
 import java.io.*;
@@ -245,7 +243,7 @@ public class OTMUtils {
     ///////////////////////////////////////////////////
 
     public static String getBaseGitHash(){
-        InputStream inputStream = OTMUtils.class.getResourceAsStream("/base.properties");
+        InputStream inputStream = OTMUtils.class.getResourceAsStream("/otm-base.properties");
         Properties properties = new Properties();
         try {
             properties.load(inputStream);
