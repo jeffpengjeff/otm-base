@@ -516,11 +516,11 @@
 			<xs:attribute name="lanes" type="xs:string" use="optional"/>
 			<xs:attribute name="length" type="xs:float" use="optional"/>
 
-			<!-- type in {loop} -->
+			<!-- type in {fixed} -->
 			<xs:attribute name="type" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="loop"/>
+						<xs:pattern value="fixed"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>

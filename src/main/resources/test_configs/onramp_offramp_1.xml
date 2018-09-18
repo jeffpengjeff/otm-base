@@ -63,10 +63,10 @@
      <!-- ........................................................ -->
 
 	<sensors>
-		<sensor id="1" type="loop" link_id="1" position="700" dt="30" />
-		<sensor id="2" type="loop" link_id="2" position="700" dt="30" />
-		<sensor id="3" type="loop" link_id="3" position="700" dt="30" />
-		<sensor id="4" type="loop" link_id="4" position="700" dt="30" />
+		<sensor id="1" type="fixed" link_id="1" position="700" dt="30" />
+		<sensor id="2" type="fixed" link_id="2" position="700" dt="30" />
+		<sensor id="3" type="fixed" link_id="3" position="700" dt="30" />
+		<sensor id="4" type="fixed" link_id="4" position="700" dt="30" />
 	</sensors>
 
 
