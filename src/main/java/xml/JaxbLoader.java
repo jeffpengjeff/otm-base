@@ -46,6 +46,11 @@ public class JaxbLoader {
         return test_configs.get(testname);
     }
 
+    public static String get_test_fullpath(String testname){
+        File file = new File("src/main/resources/test_configs/" + test_configs.get(testname));
+        return file.getAbsolutePath();
+    }
+
     public static jaxb.Scenario load_scenario(String filename, boolean validate) throws OTMException {
         try {
             return (Scenario) create_unmarshaller(validate).unmarshal(new File(filename));
@@ -70,12 +75,6 @@ public class JaxbLoader {
         InputStream stream = JaxbLoader.class.getResourceAsStream("/test_configs/" + configname);
         return load_scenario(stream,validate);
     }
-
-
-
-
-
-
 
     private static Unmarshaller create_unmarshaller(boolean validate) throws JAXBException, SAXException {
         JAXBContext jaxbContext = JAXBContext.newInstance(Scenario.class);
