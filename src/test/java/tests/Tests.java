@@ -46,4 +46,10 @@ public class Tests {
         }
     }
 
+
+    @Test
+    public void test_load_fullpath(){
+        System.out.println(JaxbLoader.get_test_fullpath(testname));
+    }
+
 }

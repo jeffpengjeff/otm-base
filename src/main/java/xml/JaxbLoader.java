@@ -72,7 +72,7 @@ public class JaxbLoader {
     }
 
     public static jaxb.Scenario load_test_scenario(String configname, boolean validate) throws OTMException {
-        InputStream stream = JaxbLoader.class.getResourceAsStream("/test_configs/" + configname);
+        InputStream stream = JaxbLoader.class.getClassLoader().getResourceAsStream("test_configs/" + configname);
         return load_scenario(stream,validate);
     }
 
