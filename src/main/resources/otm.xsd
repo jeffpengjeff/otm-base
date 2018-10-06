@@ -204,25 +204,37 @@
 
 	<xs:element name="add_lanes">
 		<xs:complexType>
+
 			<xs:all>
 				<xs:element ref="gates" minOccurs="0" />
 			</xs:all>
-			<xs:attribute name="lanes" type="xs:int" use="optional" default="1" />
-			<!-- left (l) or right (r) -->
+
+            <!-- Used when there are no gates on a managed lane, to specify open versus prohibited acces -->
+            <xs:attribute name="isopen" type="xs:boolean" use="optional" default="true"/>
+
+			<!-- inside or outside lanes -->
 			<xs:attribute name="side" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="l|r"/>
+						<xs:pattern value="in|out"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
-			<!-- start or end position, in [meter], with respect to the beginning
-			of the link. One and only one of these should be provided -->
-			<xs:attribute name="start_pos" type="xs:float" use="optional"/>
-			<xs:attribute name="end_pos" type="xs:float" use="optional"/>
-			<!-- true if lane change access is allowed over the length of the 
-			lane. False otherwise -->
-			<xs:attribute name="isopen" type="xs:boolean" use="optional" default="true"/>
+
+			<!-- upstream or downstream lanes -->
+			<xs:attribute name="pos" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="up|dn"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+
+			<!-- Unspecified length means the addlane extends the length of the link -->
+			<xs:attribute name="length" type="xs:float" use="optional"/>
+
+			<xs:attribute name="lanes" type="xs:int" use="optional" default="1" />
+
 		</xs:complexType>
 	</xs:element>
 
