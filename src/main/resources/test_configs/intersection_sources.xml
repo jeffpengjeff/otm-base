@@ -18,59 +18,72 @@
       <node id="6" x="0" y="0" />
       <node id="7" x="0" y="0" />
       <node id="8" x="0" y="0" />
+      <node id="10" x="0" y="0" />
+      <node id="30" x="0" y="0" />
+      <node id="50" x="0" y="0" />
+      <node id="70" x="0" y="0" />
     </nodes>
 
-
     <links>
-      <link id="1" full_lanes="4" length="200" start_node_id="1"  end_node_id="0" roadparam="1" >
+      <link id="1" full_lanes="3" length="500" start_node_id="1"  end_node_id="0" roadparam="1" roadgeom="1" >
         <points>
           <point x="-7.5" y="62"/>
           <point x="-7.5" y="12"/>
         </points>
       </link>
-      <link id="2" full_lanes="2" length="200" start_node_id="0"  end_node_id="2" roadparam="1" >
+      <link id="2" full_lanes="2" length="500" start_node_id="0"  end_node_id="2" roadparam="1" >
         <points>
-          <point x="9" y="12"/>
           <point x="9" y="62"/>
+          <point x="9" y="12"/>
         </points>
       </link>
-      <link id="3" full_lanes="4" length="200" start_node_id="3"  end_node_id="0" roadparam="1" >
+      <link id="3" full_lanes="3" length="500" start_node_id="3"  end_node_id="0" roadparam="1" roadgeom="1" >
         <points>
           <point x="62" y="7.5"/>
           <point x="12" y="7.5"/>
         </points>
       </link>
-      <link id="4" full_lanes="3" length="200" start_node_id="0"  end_node_id="4" roadparam="1" >
+      <link id="4" full_lanes="3" length="500" start_node_id="0"  end_node_id="4" roadparam="1" >
         <points>
-          <point x="12" y="-9"/>
           <point x="62" y="-9"/>
+          <point x="12" y="-9"/>
         </points>
       </link>
-      <link id="5" full_lanes="4" length="200" start_node_id="5"  end_node_id="0" roadparam="1" >
+      <link id="5" full_lanes="3" length="500" start_node_id="5"  end_node_id="0" roadparam="1" roadgeom="1" >
         <points>
           <point x="7.5" y="-62"/>
           <point x="7.5" y="-12"/>
         </points>
       </link>
-      <link id="6" full_lanes="2" length="200" start_node_id="0"  end_node_id="6" roadparam="1" >
+      <link id="6" full_lanes="2" length="500" start_node_id="0"  end_node_id="6" roadparam="1" >
         <points>
-          <point x="-9" y="-12"/>
           <point x="-9" y="-62"/>
+          <point x="-9" y="-12"/>
         </points>
       </link>
-      <link id="7" full_lanes="4" length="200" start_node_id="7"  end_node_id="0" roadparam="1" >
+      <link id="7" full_lanes="3" length="500" start_node_id="7"  end_node_id="0" roadparam="1" roadgeom="1" >
         <points>
           <point x="-62" y="-7.5"/>
           <point x="-12" y="-7.5"/>
         </points>
       </link>
-      <link id="8" full_lanes="3" length="200" start_node_id="0"  end_node_id="8" roadparam="1" >
+      <link id="8" full_lanes="3" length="500" start_node_id="0"  end_node_id="8" roadparam="1" >
         <points>
-          <point x="-12" y="9"/>
           <point x="-62" y="9"/>
+          <point x="-12" y="9"/>
         </points>
       </link>
+      <link id="10" full_lanes="3" length="50" start_node_id="10"  end_node_id="1" roadparam="1" />
+      <link id="30" full_lanes="3" length="50" start_node_id="30"  end_node_id="3" roadparam="1" />
+      <link id="50" full_lanes="3" length="50" start_node_id="50"  end_node_id="5" roadparam="1" />
+      <link id="70" full_lanes="3" length="50" start_node_id="70"  end_node_id="7" roadparam="1" />
     </links>
+
+    <roadgeoms>
+      <roadgeom id="1">
+        <add_lanes lanes="1" side="l" start_pos="-300"/>
+      </roadgeom>
+    </roadgeoms>
 
     <roadparams>
       <roadparam id="1" capacity="1800" speed="60" jam_density="100" />
@@ -95,18 +108,13 @@
       <roadconnection id="12" in_link="7" in_link_lanes="1#1" out_link="2" out_link_lanes="1#2" />
 
     </roadconnections>
-
   </network>
 
-  <subnetworks>
-	<subnetwork id="1">1,4</subnetwork>
-  </subnetworks>
-
   <demands>
-    <demand link_id="1" commodity_id="1" start_time="0" dt="0">1000</demand>
-    <demand link_id="3" commodity_id="1" start_time="0" dt="0">50</demand>
-    <demand link_id="5" commodity_id="1" start_time="0" dt="0">50</demand>
-    <demand link_id="7" commodity_id="1" start_time="0" dt="0">50</demand>
+    <demand link_id="10" commodity_id="1" start_time="0" dt="0">1000</demand>
+    <demand link_id="30" commodity_id="1" start_time="0" dt="0">50</demand>
+    <demand link_id="50" commodity_id="1" start_time="0" dt="0">50</demand>
+    <demand link_id="70" commodity_id="1" start_time="0" dt="0">50</demand>
   </demands>
 
   <splits>
@@ -153,9 +161,10 @@
   </actuators>
 
   <controllers>
-    <controller id="1" type="sig_pretimed">
-      
-      <target_actuators ids="1"/>
+
+      <controller id="1" type="sig_pretimed">    
+
+      <target_actuators ids="1"/>      
 
       <schedule>
 
@@ -186,7 +195,7 @@
         </schedule_item>
 
       </schedule>
-      
+
     </controller>
 
   </controllers>

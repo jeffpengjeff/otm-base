@@ -2,6 +2,12 @@
 
 <scenario>
 
+<!--
+  <plugins>
+    <plugin name="sig_pretimed_plugin" class="sigint_plugin.ControllerSignalPretimedPlugin" folder="C:\Users\gomes\code\beats\plugin_sigint\out\artifacts\plugin_sigint_jar\plugin_sigint.jar"/>
+  </plugins>
+  -->
+
   <commodities>
     <commodity id="1" name="global" pathfull="false"/>
   </commodities>
@@ -103,10 +109,6 @@
 
   </network>
 
-  <subnetworks>
-	<subnetwork id="1">1,4</subnetwork>
-  </subnetworks>
-
   <demands>
     <demand link_id="1" commodity_id="1" start_time="0" dt="0">1000</demand>
     <demand link_id="3" commodity_id="1" start_time="0" dt="0">50</demand>
@@ -158,9 +160,14 @@
   </actuators>
 
   <controllers>
-    <controller id="1" type="sig_pretimed">
-      
-      <target_actuators ids="1"/>
+
+    <!-- use this line for plugin -->
+    <!-- <controller id="1" type="sig_pretimed_plugin">    -->
+
+      <!-- use this line for beats-sim class -->
+      <controller id="1" type="sig_pretimed">    
+
+      <target_actuators ids="1"/>      
 
       <schedule>
 
@@ -191,7 +198,7 @@
         </schedule_item>
 
       </schedule>
-      
+
     </controller>
 
   </controllers>

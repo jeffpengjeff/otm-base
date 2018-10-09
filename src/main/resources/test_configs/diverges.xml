@@ -10,7 +10,7 @@
 	<network>
 
 		<nodes>
-			<node id="0" x="0" y="0"/> 
+			<node id="0" x="0" y="0"/> <!-- Control node  -->
 			<node id="1" x="-500" y="50"/>
 			<node id="2" x="-500" y="-50"/>
 			<node id="3" x="-50" y="500"/>
