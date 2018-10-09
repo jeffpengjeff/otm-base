@@ -474,6 +474,10 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
+			<!-- dt: in seconds.
+			When not specified, the controller will depend on events it creates on its own.
+			When provided, the update method will be automatically called every dt -->
+			<xs:attribute name="dt" type="xs:float" use="optional" default="-1"/>
 		</xs:complexType>
 	</xs:element>
 
