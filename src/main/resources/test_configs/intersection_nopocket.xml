@@ -159,7 +159,7 @@
 
       <schedule>
 
-        <schedule_item start_time="20" cycle="120" offset="20">
+        <schedule_item start_time="0" cycle="120" offset="20">
           <stages>
             <stage order="1" phases="1,5" duration="30"/>
             <stage order="2" phases="1,6" duration="30"/>
