@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <scenario>
 
-
 	<commodities>
-		<commodity id="1" name="c1" />
+		<commodity id="1" name="c1" pathfull="false"/>
 	</commodities>
 
 	<demands>

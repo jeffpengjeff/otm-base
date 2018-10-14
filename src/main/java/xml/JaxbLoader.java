@@ -27,15 +27,11 @@ public class JaxbLoader {
     private static HashMap<String,String> test_configs;
     static {
         test_configs = new HashMap<>();
-        test_configs.put("diverges","diverges.xml");
-        test_configs.put("fwy_offramp","fwy_offramp.xml");
-        test_configs.put("intersection","intersection.xml");
-        test_configs.put("intersection_nopocket","intersection_nopocket.xml");
         test_configs.put("line","line.xml");
-        test_configs.put("onramp_offramp_1","onramp_offramp_1.xml");
-        test_configs.put("onramp_offramp_2","onramp_offramp_2.xml");
-        test_configs.put("onramp_offramp_3","onramp_offramp_3.xml");
-        test_configs.put("onramp_offramp_4","onramp_offramp_4.xml");
+        test_configs.put("mixing","mixing.xml");
+        test_configs.put("onramp_offramp","onramp_offramp.xml");
+        test_configs.put("signal","signal.xml");
+        test_configs.put("signal_nopocket","signal_nopocket.xml");
     }
 
     public static Collection<String> get_test_config_names() {

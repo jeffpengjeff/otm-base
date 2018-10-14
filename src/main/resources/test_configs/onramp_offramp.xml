@@ -44,11 +44,11 @@
 	<demands>
 		<demand commodity_id="1" subnetwork="1" dt="2000">3000,0</demand>
 		<demand commodity_id="1" subnetwork="2" dt="2000">500,0</demand>
-		<demand commodity_id="2" link_id="2" dt="2000">2000,0</demand>
+		<demand commodity_id="2" link_id="1" dt="2000">2000,0</demand>
 	</demands>
 
-	<splits>s
-		<split_node commodity_id="w" node_id="4" link_in="3">
+	<splits>
+		<split_node commodity_id="2" node_id="4" link_in="3">
 			<split link_out="7">0.5</split>
 			<split link_out="4">0.5</split>
 		</split_node>

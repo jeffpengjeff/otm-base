@@ -91,7 +91,7 @@
 
   <roadgeoms>
     <roadgeom id="1">
-      <add_lanes lanes="1" side="l" start_pos="-300"/>
+      <add_lanes lanes="1" side="in" pos="dn" length="300"/>
     </roadgeom>
   </roadgeoms>
 

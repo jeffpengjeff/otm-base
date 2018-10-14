@@ -4,12 +4,12 @@
 
 	<commodities>
 		<commodity id="1" name="Pathless" pathfull="false" />
-		<commodity id="2" name="Pathfull" pathfull="true" subnetworks="0,1"/>
+		<commodity id="2" name="Pathfull" pathfull="true" subnetworks="1,2"/>
 	</commodities>
 
 	<subnetworks>
-		<subnetwork id="0">8,7,11,10,3</subnetwork>
-		<subnetwork id="0">8,7,11,12</subnetwork>
+		<subnetwork id="1">8,7,11,10,3</subnetwork>
+		<subnetwork id="2">8,7,11,12</subnetwork>
 	</subnetworks>
 
 	<network>
@@ -54,6 +54,7 @@
 			<roadconnection id="21" in_link="1" out_link="2"/>
 			<roadconnection id="22" in_link="1" in_link_lanes="3#3" out_link="6"/>
 			<roadconnection id="23" in_link="4" out_link="2" out_link_lanes="1#2" />
+			<roadconnection id="24" in_link="4" out_link="6" />
 			<roadconnection id="30" in_link="2" out_link="3" />
 			<roadconnection id="31" in_link="2" in_link_lanes="3#3" out_link="9" />
 			<roadconnection id="32" in_link="10" out_link="3" out_link_lanes="3#3" />
@@ -67,30 +68,30 @@
 	</network>
 
 	<splits>
-		<split_node node_id="2" commodity_id="1" link_in="1" dt="1000">
-			<split link_out="5">0.3,0</split>
-			<split link_out="2">0.3,0</split>
-			<split link_out="6">0.4,0</split>
+		<split_node node_id="2" commodity_id="1" link_in="1">
+			<split link_out="5">0.3</split>
+			<split link_out="2">0.3</split>
+			<split link_out="6">0.4</split>
 		</split_node>
-		<split_node node_id="2" commodity_id="1" link_in="4" dt="1000">
-			<split link_out="2">0.5,0</split>
-			<split link_out="6">0.5,0</split>
+		<split_node node_id="2" commodity_id="1" link_in="4">
+			<split link_out="2">0.5</split>
+			<split link_out="6">0.5</split>
 		</split_node>
-		<split_node node_id="3" commodity_id="1" link_in="2" dt="1000">
-			<split link_out="3">0.5,0</split>
-			<split link_out="9">0.5,0</split>
+		<split_node node_id="3" commodity_id="1" link_in="2">
+			<split link_out="3">0.5</split>
+			<split link_out="9">0.5</split>
 		</split_node>
-		<split_node node_id="10" commodity_id="1" link_in="11" dt="1000">
-			<split link_out="10">0.5,0</split>
-			<split link_out="12">0.5,0</split>
+		<split_node node_id="10" commodity_id="1" link_in="11">
+			<split link_out="10">0.5</split>
+			<split link_out="12">0.5</split>
 		</split_node>
 	</splits>
 
 	<demands>
 		<demand link_id="0" commodity_id="1" dt="300">100,200,300,200,100,0</demand>
 		<demand link_id="4" commodity_id="1" dt="300">100,200,300,200,100,0</demand>
-		<demand subnetwork_id="0" commodity_id="2" dt="300">100,200,300,200,100,0</demand>
-		<demand subnetwork_id="1" commodity_id="2" dt="300">100,200,300,200,100,0</demand>
+		<demand subnetwork="1" commodity_id="2" dt="300">100,200,300,200,100,0</demand>
+		<demand subnetwork="2" commodity_id="2" dt="300">100,200,300,200,100,0</demand>
 	</demands>
 
 </scenario>

@@ -271,7 +271,7 @@
             <xs:attribute name="length" type="xs:float" use="optional" default="0"/>
 			<xs:attribute name="in_link" type="xs:long" use="required" />
             <!-- "1#3" -->
-			<xs:attribute name="in_link_lanes" type="xs:string" use="required" />    
+			<xs:attribute name="in_link_lanes" type="xs:string" use="optional" />
 			<xs:attribute name="out_link" type="xs:long" use="required" />
             <!-- "1#3" -->
 			<xs:attribute name="out_link_lanes" type="xs:string" use="optional" />
