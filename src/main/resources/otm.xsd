@@ -470,7 +470,7 @@
 			<xs:attribute name="type" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="signal|signal_simple|ramp_meter|vsl"/>
+						<xs:pattern value="signal|signal_simple|ramp_meter|vsl|fd"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
