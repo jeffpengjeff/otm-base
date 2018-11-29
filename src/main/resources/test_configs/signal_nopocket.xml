@@ -6,6 +6,12 @@
     <commodity id="1" name="global" pathfull="false"/>
   </commodities>
 
+  <models>
+    <model type="ctm" name="myctm" links="" is_default="true">
+      <model_params sim_dt="2" max_cell_length="100"/>
+    </model>
+  </models>
+
   <network>
 
     <nodes>

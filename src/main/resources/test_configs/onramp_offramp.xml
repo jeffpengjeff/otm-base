@@ -12,6 +12,12 @@
 		<subnetwork id="2">6,3,7</subnetwork>
 	</subnetworks>
 
+	<models>
+		<model type="ctm" name="myctm" links="" is_default="true">
+			<model_params sim_dt="2" max_cell_length="100"/>
+		</model>
+	</models>
+
 	<network>
 		<nodes>
 			<node id="1" x="0" y="0" />
