@@ -10,7 +10,7 @@
 	</demands>
 
 	<models>
-		<model type="ctm" name="myctm" links="" is_default="true">
+		<model type="ctm" name="myctm" is_default="true">
 			<model_params sim_dt="2" max_cell_length="100"/>
 		</model>
 	</models>
