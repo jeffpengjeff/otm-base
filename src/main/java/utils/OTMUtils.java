@@ -11,7 +11,7 @@ import java.util.*;
 
 public class OTMUtils {
 
-    public static double epsilon = 1e-4;
+    public static double epsilon = 1e-6;
     public static long lane_group_counter;
     public static long vehicle_id_count;
 
