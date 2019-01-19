@@ -536,7 +536,7 @@
 			<xs:attribute name="type" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="fixed"/>
+						<xs:pattern value="fixed|commodity"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
