@@ -95,6 +95,8 @@ public class OTMUtils {
     }
 
     public static List<Double> times(List<Double> X,Double a){
+        if(X==null)
+            return null;
         List<Double> Y = new ArrayList<>();
         for(Double x:X)
             Y.add(x*a);
@@ -102,6 +104,8 @@ public class OTMUtils {
     }
 
     public static List<Float> times(List<Float> X,Float a){
+        if(X==null)
+            return null;
         List<Float> Y = new ArrayList<>();
         for(Float x:X)
             Y.add(x*a);
@@ -109,6 +113,8 @@ public class OTMUtils {
     }
 
     public static <T> Map<T,Double> times(Map<T,Double> X,Double a){
+        if(X==null)
+            return null;
         Map<T,Double> Y = new HashMap<>();
         for(Map.Entry<T,Double> entry : X.entrySet())
             Y.put(entry.getKey(), entry.getValue() * a);
