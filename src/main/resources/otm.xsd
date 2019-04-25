@@ -471,7 +471,7 @@
 			<xs:attribute name="type" use="required">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
-						<xs:pattern value="signal|signal_simple|ramp_meter|vsl|fd"/>
+						<xs:pattern value="signal|signal_simple|ramp_meter|vsl|fd|capacity"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:attribute>
@@ -479,6 +479,11 @@
 			When not specified, the controller will depend on events it creates on its own.
 			When provided, the update method will be automatically called every dt -->
 			<xs:attribute name="dt" type="xs:float"  default="-1"/>
+
+			<!-- saturation bounds for the actuator. Interpretation is actuator specific -->
+			<xs:attribute name="min_value" type="xs:float" default="-1"/>
+			<xs:attribute name="max_value" type="xs:float" default="-1"/>
+
 		</xs:complexType>
 	</xs:element>
 
